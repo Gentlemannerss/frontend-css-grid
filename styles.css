@@ -1,1 +1,62 @@
-/*Maak hier jouw CSS!*/
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto 50px 50px 50px 50px;
+    grid-gap:16px;
+    grid-template-areas:
+    ;
+}
+
+section {
+    display: flex;
+}
+
+.item {
+    align-items: center;
+    justify-content: center;
+}
+
+.item-a {
+    grid-area: header;
+    background-color: blue;
+}
+
+.item-b {
+    grid-area: main;
+    background-color: indianred;
+}
+
+.item-c {
+    grid-area: logo;
+    background-color: coral;
+}
+
+.item-d {
+    grid-area: sidebox;
+    background-color: forestgreen;
+}
+
+.item-e {
+    grid-area: article;
+    background-color: aqua;
+}
+
+.item-f {
+    grid-area: footer;
+    background-color: darkmagenta;
+}
+
+@media screen and (min-width: 997px) {
+    .container {
+        display: grid;
+        grid-template-columns: 500px 500px 500px;
+        grid-template-rows: 150px 150px 150px 150px 150px;
+        grid-gap:16px;
+        grid-template-areas:
+    "header logo logo"
+    "main logo logo"
+    "main article sidebox"
+    "main article ."
+    "footer footer footer";
+    }
+}
